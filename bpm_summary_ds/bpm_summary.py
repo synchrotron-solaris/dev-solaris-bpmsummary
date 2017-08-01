@@ -23,18 +23,22 @@ class BPMSummary(Facade):
     Those calculations are performed on BPMs' attributes provided via BPMList.
     They can be provided in two ways:
 
-    * explicit list of all attributes for calculations. It's useful when BPMs
-    are on different Device Servers. For example: some/bpm/somewhere/attr,
-    some/other/bpm/attr, here/some/other/attr
+    * explicit list of all attributes for calculations.
 
-    * simple comprehension containing '*' character in place which should accept
-    any value. For example: some/bpm/*/attr. This will allow BPMSummary Device
-    to use in calculations every single device which name fulfill this
-    comprehension, like:
+    It's useful when BPMs are on different Device Servers. For example:
+    some/bpm/somewhere/attr, some/other/bpm/attr, here/some/other/attr
+
+    * simple comprehension containing '*' character in place which should accept any value.
+
+    For example: some/bpm/*/attr. This will allow BPMSummary Device to use in
+    calculations every single device which name fulfill this comprehension, like:
 
     -- some/bpm/here/attr
+
     -- some/bpm/there/attr
+
     -- some/bpm/out_there/attr
+
     -- etc.
 
     """
