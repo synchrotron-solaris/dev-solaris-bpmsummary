@@ -9,7 +9,8 @@ setup(
     author_email=__author_email__,
     version=__version__,
     license=licence,
-    description="A simple facade device for shutter",
+    description="A simple facade device for calculating mean, RMS and maximum "
+                "deviation values of Beam Position Monitors.",
     long_description=__doc__,
     url="https://github.com/synchrotron-solaris/dev-solaris-shutter.git",
     packages=find_packages(),
