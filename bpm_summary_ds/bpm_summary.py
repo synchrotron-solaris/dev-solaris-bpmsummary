@@ -20,26 +20,26 @@ class BPMSummary(Facade):
     * standard deviation
     * maximum deviation
 
-    Those calculations are performed on BPMs' attributes provided via BPMList.
+    Those calculations are performed on BPMs' attributes provided via `BPMList`.
     They can be provided in two ways:
 
     * explicit list of all attributes for calculations.
 
     It's useful when BPMs are on different Device Servers. For example:
-    some/bpm/somewhere/attr, some/other/bpm/attr, here/some/other/attr
+    `some/bpm/somewhere/attr`, `some/other/bpm/attr`, `here/some/other/attr`
 
     * simple comprehension containing '*' character in place which should accept any value.
 
-    For example: some/bpm/*/attr. This will allow BPMSummary Device to use in
+    For example: `some/bpm/*/attr`. This will allow BPMSummary Device to use in
     calculations every single device which name fulfill this comprehension, like:
 
-    -- some/bpm/here/attr
+    -- `some/bpm/here/attr`
 
-    -- some/bpm/there/attr
+    -- `some/bpm/there/attr`
 
-    -- some/bpm/out_there/attr
+    -- `some/bpm/out_there/attr`
 
-    -- etc.
+    -- `etc.`
 
     """
 
@@ -58,7 +58,7 @@ class BPMSummary(Facade):
         dtype=float,
         property_name='BPMList',
         access=AttrWriteType.READ,
-        description="This function calculates mean of all provided BPMs' attributes")
+        description="This attribute calculates mean of all provided BPMs' attributes")
     def Mean(self, *args):
         return mean(args)
 
@@ -66,7 +66,7 @@ class BPMSummary(Facade):
         dtype=float,
         property_name='BPMList',
         access=AttrWriteType.READ,
-        description="This function calculates root mean square of all provided "
+        description="This attribute calculates root mean square of all provided "
                     "BPMs' attributes")
     def RMS(self, *args):
         squared = list(map(lambda x: x ** 2, args))
@@ -76,7 +76,7 @@ class BPMSummary(Facade):
         dtype=float,
         property_name='BPMList',
         access=AttrWriteType.READ,
-        description="This function calculates peak to peak value of all provided "
+        description="This attribute calculates peak to peak value of all provided "
                     "BPMs' attributes")
     def PeakToPeak(self, *args):
         return max(args) - min(args)
@@ -85,7 +85,7 @@ class BPMSummary(Facade):
         dtype=float,
         property_name='BPMList',
         access=AttrWriteType.READ,
-        description="This function calculates standard deviation of all provided "
+        description="This attribute calculates standard deviation of all provided "
                     "BPMs' attributes")
     def StandardDeviation(self, *args):
         return std(args)
@@ -94,7 +94,7 @@ class BPMSummary(Facade):
         dtype=float,
         property_name='BPMList',
         access=AttrWriteType.READ,
-        description="This function calculates maximum deviation of all provided "
+        description="This attribute calculates maximum deviation of all provided "
                     "BPMs' attributes")
     def MaximumDeviation(self, *args):
         return max(args)
