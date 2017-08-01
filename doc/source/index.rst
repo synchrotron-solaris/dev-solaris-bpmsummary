@@ -1,9 +1,9 @@
-.. Beam Position Motors Summary Device Class documentation master file, created by
+.. Beam Position Monitors Summary Device Class documentation master file, created by
    sphinx-quickstart on Tue Aug  1 08:38:29 2017.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Beam Position Motors Summary Device Class's documentation!
+Welcome to Beam Position Monitors Summary Device Class's documentation!
 =====================================================================
 
 .. toctree::

@@ -12,7 +12,7 @@ from math import sqrt
 class BPMSummary(Facade):
     """
     This Tango Device Class implements Facade Device to summarize Beam
-    Position Motors. It allows to compute following values:
+    Position Monitors. It allows to compute following values:
 
     * mean
     * root mean square
@@ -46,7 +46,7 @@ class BPMSummary(Facade):
     def safe_init_device(self):
         """
         This is a method to safely initialize the BPMSummary device,
-        overrode from Facade base class
+        overriding a method from the base class - Facade.
         """
         super(BPMSummary, self).safe_init_device()
         self.set_state(DevState.ON)
